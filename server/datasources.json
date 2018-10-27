@@ -1,0 +1,13 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mysql": {
+    "host": "localhost",
+    "database": "lagoeiro",
+    "name": "mysql",
+    "user": "root",
+    "connector": "mysql"
+  }
+}

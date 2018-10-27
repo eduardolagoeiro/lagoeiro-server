@@ -1,0 +1,67 @@
+{
+  "name": "person",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "photo": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "birthday": {
+      "type": "date"
+    },
+    "deathday": {
+      "type": "date"
+    },
+    "dead": {
+      "type": "boolean"
+    },
+    "sex": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "father": {
+      "type": "belongsTo",
+      "model": "person",
+      "foreignKey": "fatherId"
+    },
+    "mother": {
+      "type": "belongsTo",
+      "model": "person",
+      "foreignKey": "motherId"
+    },
+    "fatherChild": {
+      "type": "hasMany",
+      "model": "person",
+      "foreignKey": "fatherId"
+    },
+    "motherChild": {
+      "type": "hasMany",
+      "model": "person",
+      "foreignKey": "motherId"
+    },
+    "spouse": {
+      "type": "belongsTo",
+      "model": "person",
+      "foreignKey": "spouseId"
+    },
+    "spouses": {
+      "type": "hasMany",
+      "model": "person",
+      "foreignKey": "spouseId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
