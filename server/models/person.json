@@ -23,10 +23,12 @@
       "type": "date"
     },
     "dead": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false 
     },
     "sex": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true 
     }
   },
   "validations": [],
@@ -50,16 +52,6 @@
       "type": "hasMany",
       "model": "person",
       "foreignKey": "motherId"
-    },
-    "spouse": {
-      "type": "belongsTo",
-      "model": "person",
-      "foreignKey": "spouseId"
-    },
-    "spouses": {
-      "type": "hasMany",
-      "model": "person",
-      "foreignKey": "spouseId"
     }
   },
   "acls": [],
